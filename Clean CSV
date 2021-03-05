@@ -1,0 +1,31 @@
+Exploring with Visuals
+Use clean_08.csv and clean_18.csv. You should've created these data files in the previous section: Fixing Data Types Pt 3.
+
+# load datasets
+import pandas as pd
+import numpy as np
+% matplotlib inline
+df_08 = pd.read_csv('clean_08.csv')
+df_18 = pd.read_csv('clean_18.csv')
+df_08.head(0)
+model	displ	cyl	trans	drive	fuel	veh_class	air_pollution_score	city_mpg	hwy_mpg	cmb_mpg	greenhouse_gas_score	smartway
+df_08.hist('greenhouse_gas_score')
+array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7f24668c65f8>]], dtype=object)
+
+df_18.hist('greenhouse_gas_score')
+array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7f2463ef3128>]], dtype=object)
+
+df_08.hist('cmb_mpg')
+array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7f2461e20898>]], dtype=object)
+
+df_18.hist('cmb_mpg')
+array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7f2461cfcdd8>]], dtype=object)
+
+df_08.plot(x='cmb_mpg', y='displ', kind = 'scatter');
+
+df_18.plot(x='cmb_mpg', y='displ', kind = 'scatter');
+
+df_08.plot(x='greenhouse_gas_score', y='cmb_mpg', kind = 'scatter');
+
+df_08.plot(x='greenhouse_gas_score', y='cmb_mpg', kind = 'scatter');
+<matplotlib.axes._subplots.AxesSubplot at 0x7f2461a88518>
